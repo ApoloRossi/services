@@ -40,7 +40,7 @@ class ServicoTest : Service() {
 
         override fun run() {
 
-            while (ativo && count < 10) {
+            while (ativo && count < 1000) {
                 try {
                     sleep(1000)
                 } catch (e : InterruptedException) {

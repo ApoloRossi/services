@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidServices">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -26,6 +27,14 @@
                 <action android:name="SERVICO_TEST"/>
             </intent-filter>
         </service>
+
+        <receiver android:name=".BroadcastTest" android:label="BroadcastTest" android:exported="false"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
